@@ -11,12 +11,15 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         SqliteDB db = new SqliteDB();
+        Operations op = new Operations();
 
 
 
 
-       // db.createMovie();
-       // db.removeMovie();
+       // op.createMovie();
+       // op.removeMovie();
+        //op.avgReview();
+
 
         db.listProfiles();
 

@@ -29,6 +29,7 @@ public class SqliteDB {
                 String lastname = rs.getString("pro_lname");
                 int age = rs.getInt("pro_age");
 
+
                 System.out.println(id + "" + firstname + "" + lastname + "" + age);
             }
 

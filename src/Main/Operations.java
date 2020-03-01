@@ -62,14 +62,16 @@ public class Operations extends SqliteDB {
         }
         return bos != null ? bos.toByteArray() : null;
     }
-/*
-    private void readPicture(int materialId, String filename) {
+
+    private void readPicture(String filename) {
         FileOutputStream fos = null;
         ResultSet rs = null;
 
         try {
             String upPicQuery = "SELECT picture FROM movie WHERE mov_id = ?;";
             PreparedStatement pst = c.prepareStatement(upPicQuery);
+
+            pst.setInt(1, 1);
 
             File file = new File(filename);
             fos = new FileOutputStream(file);
@@ -84,28 +86,9 @@ public class Operations extends SqliteDB {
             }
         } catch (SQLException | IOException e) {
             System.out.println(e.getMessage());
-        } finally {
-            try {
-                if (rs != null) {
-                    rs.close();
-                }
-                if (pstmt != null) {
-                    pstmt.close();
-                }
-
-                if (conn != null) {
-                    conn.close();
-                }
-                if (fos != null) {
-                    fos.close();
-                }
-
-            } catch (SQLException | IOException e) {
-                System.out.println(e.getMessage());
-            }
         }
     }
-*/
+
 
     public void updatePictures() {
 

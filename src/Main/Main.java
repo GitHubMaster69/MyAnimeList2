@@ -12,6 +12,7 @@ public class Main {
 	// write your code here
         SqliteDB db = new SqliteDB();
         Operations op = new Operations();
+        User_Operations uop = new User_Operations();
 
 
 
@@ -22,6 +23,8 @@ public class Main {
         //db.listProfiles();
         //op.updatePictures();
         //op.readPicture();
+        //uop.login();
+        uop.review();
 
         db.closeConnection();
         /*

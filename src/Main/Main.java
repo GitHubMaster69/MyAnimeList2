@@ -20,7 +20,8 @@ public class Main {
        // op.removeMovie();
         //op.avgReview();
         //db.listProfiles();
-        op.updatePictures();
+        //op.updatePictures();
+        //op.readPicture();
 
         db.closeConnection();
         /*

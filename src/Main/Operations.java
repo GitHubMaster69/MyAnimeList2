@@ -63,7 +63,7 @@ public class Operations extends SqliteDB {
         return bos != null ? bos.toByteArray() : null;
     }
 
-    private void readPicture(String filename) {
+    public void readPicture(String filename) {
         FileOutputStream fos = null;
         ResultSet rs = null;
 

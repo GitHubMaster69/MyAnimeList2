@@ -24,7 +24,7 @@ public class Main {
         //op.updatePictures();
         //op.readPicture();
         //uop.login();
-        uop.review();
+        //uop.review();
 
         db.closeConnection();
         /*
@@ -35,20 +35,5 @@ public class Main {
         System.out.println((names).toString());
         */
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

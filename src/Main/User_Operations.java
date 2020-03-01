@@ -22,12 +22,11 @@ public class User_Operations extends Operations {
     }
     public void addFavorite() {
         try  {
-            String addFavQuery = "INSERT INTO favorites VALUES (?,?,?);";
+            String addFavQuery = "INSERT INTO favorites (pro_id, mov_sta_id, mov_id) SELECT session.pro_id FROM session, ?,?;";
             PreparedStatement pst = c.prepareStatement(addFavQuery);
 
-            pst.setString(1,"1"); // pro_id
-            pst.setString(2, "dummy"); //mov_sta_id
-            pst.setString(3, "100"); //mov_id
+            pst.setString(1, "dummy"); //mov_sta_id
+            pst.setString(2, "100"); //mov_id
 
             pst.execute();
             System.out.println("Favorite added succesfully");

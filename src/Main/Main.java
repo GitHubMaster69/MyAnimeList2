@@ -19,9 +19,8 @@ public class Main {
        // op.createMovie();
        // op.removeMovie();
         //op.avgReview();
-
-
-        db.listProfiles();
+        //db.listProfiles();
+        op.updatePictures();
 
         db.closeConnection();
         /*

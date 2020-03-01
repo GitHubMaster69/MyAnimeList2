@@ -18,25 +18,6 @@ public class SqliteDB {
         }
     }
 
-    public void listProfiles() {
-        try {
-            this.stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM profiles");
-
-            while(rs.next()) {
-                int id = rs.getInt("pro_id");
-                String firstname = rs.getString("pro_fname");
-                String lastname = rs.getString("pro_lname");
-                int age = rs.getInt("pro_age");
-
-
-                System.out.println(id + "" + firstname + "" + lastname + "" + age);
-            }
-
-        } catch (Exception e)  {
-            System.out.println("Error: " + e.getMessage());
-        }
-    }
 
     public void closeConnection() {
         try {

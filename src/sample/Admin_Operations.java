@@ -1,4 +1,4 @@
-package Main;
+package sample;
 
 import java.sql.PreparedStatement;
 

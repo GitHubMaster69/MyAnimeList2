@@ -39,6 +39,20 @@ public class Operations extends SqliteDB {
             e.printStackTrace();
         }
     }
+    public void removeProfile() {
+        try  {
+            String deleteQuery = "DELETE FROM profiles WHERE pro_id = ?";
+            PreparedStatement pst = c.prepareStatement(deleteQuery);
+
+            pst.setString(1,"1");
+
+            pst.executeUpdate();
+            System.out.println("User removed succesfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void review() {
         try  {
